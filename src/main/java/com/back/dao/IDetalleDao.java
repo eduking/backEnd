@@ -8,3 +8,7 @@ public interface IDetalleDao extends JpaRepository<Detalle,Integer>{
     
     
 }
+
+
+
+

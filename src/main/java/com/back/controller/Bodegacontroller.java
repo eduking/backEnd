@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.back.model.Bodega;
 import com.back.service.IBodegaService;
 
-
-
 @RestController
 @RequestMapping("/api/bodega")
 public class Bodegacontroller {
@@ -27,8 +25,16 @@ public class Bodegacontroller {
         return new ResponseEntity<List<Bodega>>(bodegas,HttpStatus.OK);
 
     }
-    
 
+    @GetMapping(value ="/listarVista",produces="application/json")
+    public ResponseEntity<List<Object>>ListarVista(){
+        List<Object>lista=new ArrayList<>();
+        lista=iBodegaService.listarvista();
+        return new ResponseEntity<List<Object>>(lista,HttpStatus.OK);
+
+    }
+    
+    
 
 
 

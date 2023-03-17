@@ -101,7 +101,7 @@ public class Detalle {
 	@Column(name = "det_forma_pago", length = 11)
 	private String detFormaPago;
 
-	@Column(name = "esado")
+	@Column(name = "estado")
 	private Integer estado;
 
 	@Column(name = "subsidio")

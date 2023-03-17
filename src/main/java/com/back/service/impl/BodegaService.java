@@ -45,6 +45,11 @@ public class BodegaService implements IBodegaService {
         return dao.findAll();
     }
 
+    @Override
+    public List<Object> listarvista() {
+        // TODO Auto-generated method stub
+        return dao.listarvista();
+    }
 
 
     
