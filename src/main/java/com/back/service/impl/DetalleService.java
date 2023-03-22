@@ -15,20 +15,17 @@ public class DetalleService implements IDetalleService {
 
     @Override
     public Detalle registrar(Detalle t) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'registrar'");
+        return dao.save(t);
     }
 
     @Override
     public Detalle actualizar(Detalle t) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actualizar'");
+        return dao.save(t);
     }
 
     @Override
     public void eliminar(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
+        dao.deleteById(id);
     }
 
     @Override
@@ -42,8 +39,6 @@ public class DetalleService implements IDetalleService {
         // TODO Auto-generated method stub
         return dao.findAll();
     }
-
-
 
     
 }

@@ -13,24 +13,21 @@ import com.back.service.IBodegaDetalleService;
 public class BodegaDetalleService implements IBodegaDetalleService {
 
     @Autowired
-    private IBodegaDetalleDao dao ;
+    private IBodegaDetalleDao dao;
 
     @Override
     public BodegaDetalle registrar(BodegaDetalle t) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'registrar'");
+        return dao.save(t);
     }
 
     @Override
     public BodegaDetalle actualizar(BodegaDetalle t) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actualizar'");
+        return dao.save(t);
     }
 
     @Override
     public void eliminar(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
+        dao.deleteById(id);
     }
 
     @Override
@@ -44,8 +41,6 @@ public class BodegaDetalleService implements IBodegaDetalleService {
         // TODO Auto-generated method stub
         return dao.findAll();
     }
-
-
 
     
 }

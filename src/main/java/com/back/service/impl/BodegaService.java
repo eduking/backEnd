@@ -1,10 +1,8 @@
 package com.back.service.impl;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.back.dao.IBodegaDao;
 import com.back.model.Bodega;
 import com.back.service.IBodegaService;
@@ -13,24 +11,21 @@ import com.back.service.IBodegaService;
 public class BodegaService implements IBodegaService {
 
     @Autowired
-    private IBodegaDao dao ;
+    private IBodegaDao dao;
 
     @Override
     public Bodega registrar(Bodega t) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'registrar'");
+        return dao.save(t);
     }
 
     @Override
     public Bodega actualizar(Bodega t) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actualizar'");
+        return dao.save(t);
     }
 
     @Override
     public void eliminar(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
+        dao.deleteById(id);
     }
 
     @Override
